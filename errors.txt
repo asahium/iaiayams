@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/night0.rpy", line 23: expected end of line
-    stop music "bestmusicever.mp3"
-               ^
+File "game/script.rpy", line 42: expected 'name' not found.
+    show kitchen onlayer  
+                          ^
 
-File "game/night0.rpy", line 94: expected end of line
-    stop music "school.mp3"
-               ^
-
-Ren'Py Version: Ren'Py 8.1.1.23060707
-Sun Jul 30 00:19:35 2023
+Ren'Py Version: Ren'Py 8.2.1.24030407
+Tue Apr  2 01:46:57 2024

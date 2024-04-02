@@ -1,30 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/night0.rpy", line 57, in script
-    show boy1 normal at left with dissolve
-Exception: Image 'boy1' does not accept attributes 'normal'.
+  File "game/script.rpy", line 308, in script
+    "Я думаю о том, что Михаил называл меня "Лекси", и очень мило смеялся. Я думаю о том, что Михаил сказал мне, что я милый."
+Exception: Say has image attributes ('Лекси',), but there's no image tag associated with the speaking character.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/night0.rpy", line 57, in script
-    show boy1 normal at left with dissolve
-  File "/home/wyrm/renpy-8.1.1-sdk/renpy/ast.py", line 1428, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "/home/wyrm/renpy-8.1.1-sdk/renpy/ast.py", line 1391, in show_imspec
-    renpy.config.show(name,
-  File "/home/wyrm/renpy-8.1.1-sdk/renpy/exports.py", line 733, in show
-    if not base.find_target() and renpy.config.missing_show:
-  File "/home/wyrm/renpy-8.1.1-sdk/renpy/display/image.py", line 421, in find_target
-    self.target = target._duplicate(a)
-  File "/home/wyrm/renpy-8.1.1-sdk/renpy/display/core.py", line 496, in _duplicate
-    args.extraneous()
-  File "/home/wyrm/renpy-8.1.1-sdk/renpy/display/core.py", line 359, in extraneous
-    raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'boy1' does not accept attributes 'normal'.
+  File "game/script.rpy", line 308, in script
+    "Я думаю о том, что Михаил называл меня "Лекси", и очень мило смеялся. Я думаю о том, что Михаил сказал мне, что я милый."
+  File "/Users/asahium/Downloads/renpy-8.2.1-sdk/renpy/ast.py", line 2557, in execute
+    Say.execute(self)
+  File "/Users/asahium/Downloads/renpy-8.2.1-sdk/renpy/ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Users/asahium/Downloads/renpy-8.2.1-sdk/renpy/exports.py", line 1491, in say
+    renpy.store.say(who, what, *args, **kwargs)
+  File "/Users/asahium/Downloads/renpy-8.2.1-sdk/renpy/defaultstore.py", line 419, in say
+    who(what, *args, interact=interact, **kwargs)
+  File "/Users/asahium/Downloads/renpy-8.2.1-sdk/renpy/character.py", line 1332, in __call__
+    old_attr_state = self.handle_say_attributes(False, interact)
+  File "/Users/asahium/Downloads/renpy-8.2.1-sdk/renpy/character.py", line 1151, in handle_say_attributes
+    if self.resolve_say_attributes(predicting, attrs):
+  File "/Users/asahium/Downloads/renpy-8.2.1-sdk/renpy/character.py", line 1077, in resolve_say_attributes
+    raise Exception("Say has image attributes %r, but there's no image tag associated with the speaking character." % (attrs,))
+Exception: Say has image attributes ('Лекси',), but there's no image tag associated with the speaking character.
 
-Linux-6.4.4-200.fc38.x86_64-x86_64-with-glibc2.37 x86_64
-Ren'Py 8.1.1.23060707
+macOS-14.4.1-arm64-arm-64bit arm64
+Ren'Py 8.2.1.24030407
 I am ill and you are my symptom 1.0
-Sat Jul 29 23:58:58 2023
+Tue Apr  2 20:11:58 2024

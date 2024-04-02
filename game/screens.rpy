@@ -93,8 +93,7 @@ style frame:
 ## применить к ним настройки стиля.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
-
-screen say(who, what):
+screen say(who, what, side_image=None, two_window=False):
     style_prefix "say"
 
     window:
@@ -116,6 +115,32 @@ screen say(who, what):
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
 
+# screen say(who, what, side_image=None, two_window=False):
+#     style_prefix "say"
+
+#     window:
+#         id "window"
+
+#         if who is not None:
+
+#             window:
+#                 id "namebox"
+#                 style "namebox"
+#                 text who id "who"
+
+#         text what id "what"
+
+
+#     ## Если есть боковое изображение ("голова"), показывает её поверх текста.
+#     ## По стандарту не показывается на варианте для мобильных устройств — мало
+#     ## места.
+#     if not renpy.variant("small"):
+#         add SideImage() xalign 0.0 yalign 1.0
+
+#     if side_image:
+#         add side_image
+#     else:
+#         add SideImage() xalign 0.0 yalign 1.0
 
 ## Делает namebox доступным для стилизации через объект Character.
 init python:
@@ -136,7 +161,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    # background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -558,8 +583,6 @@ screen about():
             ## gui.about обычно установлено в options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
-
-            text _("Сделано с помощью {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
 style about_label is gui_label
