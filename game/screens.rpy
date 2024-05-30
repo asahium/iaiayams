@@ -1024,7 +1024,7 @@ screen help():
 screen keyboard_help():
 
     hbox:
-        label _("Войти")
+        label _("Enter")
         text _("Прохождение диалогов, активация интерфейса.")
 
     hbox:
@@ -1048,11 +1048,11 @@ screen keyboard_help():
         text _("Включает режим пропуска.")
 
     hbox:
-        label _("Страница вверху")
+        label _("Page Up")
         text _("Откат назад по сюжету игры.")
 
     hbox:
-        label _("Страница вниз")
+        label _("Page Down")
         text _("Откатывает предыдущее действие вперёд.")
 
     hbox:

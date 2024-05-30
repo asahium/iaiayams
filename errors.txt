@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 42: expected 'name' not found.
-    show kitchen onlayer  
-                          ^
+File "game/script.rpy", line 40: play requires a channel
+    play "audio/Electricity.wav"
+         ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Tue Apr  2 01:46:57 2024
+Wed May 29 23:49:14 2024

@@ -26,7 +26,7 @@ define config.check_conflicting_properties = True
 ## Цвета текста в интерфейсе.
 
 ## Акцентный цвет используется в заголовках и подчёркнутых текстах.
-define gui.accent_color = '#0099cc'
+define gui.accent_color = '#ffffff'
 
 ## Цвет, используемый в текстовой кнопке, когда она не выбрана и не наведена.
 define gui.idle_color = '#888888'
@@ -89,8 +89,8 @@ define gui.title_text_size = 75
 ## Главное и игровое меню. #####################################################
 
 ## Изображения, используемые в главном и игровом меню.
-define gui.main_menu_background = "images/bg/door.png"
-define gui.game_menu_background = "images/bg/door.png"
+define gui.main_menu_background = "images/black-screen-2.jpg"
+define gui.game_menu_background = "images/black-screen-2.jpg"
 
 
 ## Диалог ######################################################################
@@ -317,108 +317,63 @@ define gui.bar_size = 38
 define gui.scrollbar_size = 18
 define gui.slider_size = 38
 
-## True, если изображения панелей должны моститься. False, если они должны быть
-## линейно масштабированы.
 define gui.bar_tile = False
 define gui.scrollbar_tile = False
 define gui.slider_tile = False
 
-## Горизонтальные границы.
 define gui.bar_borders = Borders(6, 6, 6, 6)
 define gui.scrollbar_borders = Borders(6, 6, 6, 6)
 define gui.slider_borders = Borders(6, 6, 6, 6)
 
-## Вертикальные границы.
 define gui.vbar_borders = Borders(6, 6, 6, 6)
 define gui.vscrollbar_borders = Borders(6, 6, 6, 6)
 define gui.vslider_borders = Borders(6, 6, 6, 6)
 
-## Что делать с непрокручиваемыми полосами прокрутки в интерфейсе. "hide" прячет
-## их, а None их показывает.
 define gui.unscrollable = "hide"
 
 
-## История #####################################################################
-##
-## Экран истории показывает диалог, который игрок уже прошёл.
-
-## Количество диалоговых блоков истории, которые Ren'Py будет хранить.
 define config.history_length = 250
 
-## Высота доступных записей на экране истории, или None, чтобы задать высоту в
-## зависимости от производительности.
 define gui.history_height = 210
 
-## Местоположение, ширина и выравнивание заголовка, показывающего имя говорящего
-## персонажа.
 define gui.history_name_xpos = 233
 define gui.history_name_ypos = 0
 define gui.history_name_width = 233
 define gui.history_name_xalign = 1.0
 
-## Местоположение, ширина и выравнивание диалогового текста.
 define gui.history_text_xpos = 255
 define gui.history_text_ypos = 3
 define gui.history_text_width = 1110
 define gui.history_text_xalign = 0.0
 
-
-## Режим NVL ###################################################################
-##
-## Экран режима NVL показывает диалог NVL персонажей.
-
-## Границы фона окна NVL.
 define gui.nvl_borders = Borders(0, 15, 0, 30)
-
-## Максимальное число показываемых строк в режиме NVL. Когда количество строчек
-## начинает превышать это значение, старые строчки очищаются.
 define gui.nvl_list_length = 6
-
-## Высота доступных строчек в режиме NVL. Установите на None, чтобы строчки
-## динамически регулировали свою высоту.
 define gui.nvl_height = 173
 
-## Интервал между строчками в режиме NVL, если gui.nvl_height имеет значение
-## None, а также между строчками и меню режима NVL.
 define gui.nvl_spacing = 15
 
-## Местоположение, ширина и выравнивание заголовка, показывающего имя говорящего
-## персонажа.
 define gui.nvl_name_xpos = 645
 define gui.nvl_name_ypos = 0
 define gui.nvl_name_width = 225
 define gui.nvl_name_xalign = 1.0
 
-## Местоположение, ширина и выравнивание диалогового текста.
 define gui.nvl_text_xpos = 675
 define gui.nvl_text_ypos = 12
 define gui.nvl_text_width = 885
 define gui.nvl_text_xalign = 0.0
 
-## Местоположение, ширина и выравнивание текста nvl_thought (текст от лица
-## персонажа nvl_narrator).
 define gui.nvl_thought_xpos = 360
 define gui.nvl_thought_ypos = 0
 define gui.nvl_thought_width = 1170
 define gui.nvl_thought_xalign = 0.0
 
-## Местоположение кнопок меню NVL.
 define gui.nvl_button_xpos = 675
 define gui.nvl_button_xalign = 0.0
 
 
-## Локализация #################################################################
-
-## Эта настройка контролирует доступ к разрыву линий. Стандартная настройка
-## подходит для большинства языков. Список доступных значений можно найти на
-## https://www.renpy.org/doc/html/style_properties.html#style-property-language
 
 define gui.language = "unicode"
 
-
-################################################################################
-## Мобильные устройства
-################################################################################
 
 init python:
 
